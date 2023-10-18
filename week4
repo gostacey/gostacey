@@ -1,0 +1,21 @@
+size (1000. 1800):
+img = loadImage ("IMG_3004.JPG");
+smallDoint =
+36:
+largePoint = 70:
+imageMode (CENTER);
+nostroke:
+10 background (255):
+frameraterloggu:
+12
+13 void draw() {
+float pointillize = map (mouseX, 0, width, smallPoint, largePoint);
+ant X = intrandom (img.width)):
+ant v = int random(img.height):
+17
+18
+19
+20
+color pix = img.get X.v):
+fill (pix, 128);
+ellipse(x, y, pointillize, pointillize);
