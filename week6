@@ -1,0 +1,25 @@
+void setup(){
+  size(1000,1000,OPENGL);
+}
+
+void draw(){
+  background(0);
+  strokeWeight(10);
+  stroke(255,113,113);
+  fill(255,255,255,255);
+  
+  for(int i=0;i<400;i=i+20){
+    int vertexCount=int(map(i,30,889,100,10));
+    mPolygon(width/2,height/2,vertexCount,i,i/5);
+  }
+}
+
+void mPolygon(int x,int y,int numOfVertex,int br,int rOff){
+  beginShape();
+  for(int i=0;i<numOfVertex;i++){
+    float pingPong=sin(radians(millis()/6.0+20*i));
+    float r=br+map(pingPong,-2,-1,-rOff,rOff);
+    vertex(x+cos(radians(i*360/numOfVertex))*r,y+sin(radians(i*360/numOfVertex))*r);
+  }
+  endShape(CLOSE);
+}
